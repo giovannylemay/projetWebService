@@ -1,0 +1,41 @@
+/* Bootstrap centered */
+.row-centered {
+    text-align: center;
+}
+.col-centered {
+    display: inline-block;
+    float: none;
+    /* reset the text-align */
+    text-align: left;
+    margin-right: -4px;
+}
+
+
+/* Login */
+
+.login{
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 0px 0px 2px #000;
+}
+
+/* Main list */
+
+.list-survey{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.survey{
+    margin-bottom: 50px;
+
+}
+
+.survey span{
+    margin-left: 50px;
+}
