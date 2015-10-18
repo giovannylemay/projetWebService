@@ -18,7 +18,7 @@ USE `WebServices` ;
 -- Table `WebServices`.`Livre`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `WebServices`.`Livre` (
-  `idLivre` INT NOT NULL,
+  `idLivre` INT NOT NULL AUTO_INCREMENT,
   `nomLivre` VARCHAR(45) NULL,
   `Au` VARCHAR(45) NULL,
   PRIMARY KEY (`idLivre`))
@@ -29,7 +29,7 @@ ENGINE = InnoDB;
 -- Table `WebServices`.`Kind`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `WebServices`.`Kind` (
-  `idKind` INT NOT NULL,
+  `idKind` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `definition` VARCHAR(100) NULL,
   PRIMARY KEY (`idKind`))
@@ -40,7 +40,7 @@ ENGINE = InnoDB;
 -- Table `WebServices`.`Series`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `WebServices`.`Series` (
-  `idSeries` INT NOT NULL,
+  `idSeries` INT NOT NUL AUTO_INCREMENTL,
   `name` VARCHAR(45) NULL,
   `detail` VARCHAR(45) NULL,
   PRIMARY KEY (`idSeries`))
@@ -51,7 +51,7 @@ ENGINE = InnoDB;
 -- Table `WebServices`.`Author`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `WebServices`.`Author` (
-  `idAuthor` INT NOT NULL,
+  `idAuthor` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `firstname` VARCHAR(45) NULL,
   PRIMARY KEY (`idAuthor`))
@@ -62,7 +62,7 @@ ENGINE = InnoDB;
 -- Table `WebServices`.`Book`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `WebServices`.`Book` (
-  `idBook` INT NOT NULL,
+  `idBook` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(45) NULL,
   `size` VARCHAR(45) NULL,
   `duration` VARCHAR(45) NULL,
@@ -95,7 +95,7 @@ ENGINE = InnoDB;
 -- Table `WebServices`.`User`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `WebServices`.`User` (
-  `idUser` INT NOT NULL,
+  `idUser` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `firstname` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,
@@ -132,7 +132,7 @@ ENGINE = InnoDB;
 -- Table `WebServices`.`Playlist`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `WebServices`.`Playlist` (
-  `idPlaylist` INT NOT NULL,
+  `idPlaylist` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `dateCreation` DATE NULL,
   `idUser` INT NOT NULL,
@@ -173,7 +173,7 @@ ENGINE = InnoDB;
 -- Table `WebServices`.`LastTime`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `WebServices`.`LastTime` (
-  `idLast` INT NOT NULL,
+  `idLast` INT NOT NULL AUTO_INCREMENT,
   `time` VARCHAR(45) NULL,
   `idUser` INT NOT NULL,
   `idBook` INT NOT NULL,
