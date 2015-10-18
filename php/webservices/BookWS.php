@@ -3,8 +3,8 @@ require_once('webservices/IWebService.php');
 require_once('../database/db_connect.php');
 
 const PARAM_ACTION = 'action';
-const GET_PLAYLIST_ADMIN = 'listing';
-const SQL_GET_PLAYLIST_ADMIN = 'SELECT Playlist.name, Playlist.idPlaylist FROM PlayList INNER JOIN USER ON USER.idUser = PLAYLIST.idUser WHERE USER.isAdmin = 1';
+const GET_BOOK = 'book';
+const SQL_GET_BOOK = 'SELECT * FROM Musique INNER JOIN belong ON belong.idBook';
 
     class PlaylistWS implements IWebService {
 
@@ -20,19 +20,21 @@ const SQL_GET_PLAYLIST_ADMIN = 'SELECT Playlist.name, Playlist.idPlaylist FROM P
             if (!isset($_GET[PARAM_ACTION]))
                 Helper::ThrowAccessDenied();
 
-            switch ($_GET[PARAM_ACTION])
-            {
-                case GET_PLAYLIST_ADMIN:
-                    return $this->getPlaylistAdmin();
+            switch ($_GET[PARAM_ACTION]){
+                case GET_BOOK:
+                    return $this->getBook();
+
                 default:
                     Helper::ThrowAccessDenied();
                     break;
             }
         }
 
+        public function getBook(){
+            if(!isset($_GET['id']))
+                Helper::ThrowAccessDenied();
 
-        public function getPlaylistAdmin(){
-            MySQL::Execute(SQL_GET_PLAYLIST_ADMIN);
+            MySQL::Execute(SQL_GET_BOOK.$_GET['id']);
 
             return MySQL::GetResult()->fetchAll();
         }

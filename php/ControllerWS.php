@@ -1,6 +1,6 @@
 <?php
 
-	include_once('helper.php');
+	include_once('../helper/Helper.php');
 
 	const PARAM_WS = 'ws';
 	const PATH_WEBSERVICES = 'webservices';

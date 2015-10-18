@@ -40,7 +40,7 @@ ENGINE = InnoDB;
 -- Table `WebServices`.`Series`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `WebServices`.`Series` (
-  `idSeries` INT NOT NUL AUTO_INCREMENTL,
+  `idSeries` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `detail` VARCHAR(45) NULL,
   PRIMARY KEY (`idSeries`))

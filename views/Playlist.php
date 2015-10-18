@@ -16,26 +16,16 @@
 
         <div class="col-md-12 col-centered">
 
-            <div class="list-playlist">
+            <div class="list-book">
 
-                <h1>Liste des playlist administrateur</h1>
-
-                <br>
-
-                <ul class="list-group" id="listPlaylistAdmin"><ul>
-
-            </div>
-
-
-            <div class="list-playlist">
-
-                <h1>Liste des playlist personnelles</h1>
+                <h1>Liste des livres</h1>
 
                 <br>
 
-                <ul class="list-group" id="listPlaylistPerso"><ul>
+                <ul class="list-group" id="listBook"><ul>
 
             </div>
+
 
         </div> <!-- /col-centered -->
 
@@ -53,19 +43,19 @@
 <script type="text/javascript">
 
     $(document).ready(function(){
-            $.ajax({
-                url: WS_URL_GET_LISTPLAYLISTADMIN,
-                type:'GET',
+        $.ajax({
+                url: WS_URL_GET_BOOK + $_GET['id'],
+                type:'POST',
                 success: function(response)
                 {
                     var obj = jQuery.parseJSON(response);
                     for(var i = 0; i < obj.length;i++){
-                        $('#listPlaylistAdmin').append('<a href="Playlist.php?id='+ obj[i].idPlaylist +'" class="list-group-item" title="">'+ obj[i].name +'</a>');
+                    $('#listBook').append('<a href="Playlist.php?id='+ obj[i].idPlaylist +'" class="list-group-item" title="">'+ obj[i].name +'</a>');
                     }
                 },
                 error: function(){
-                    alert('Problème rencontré dans le réseau.');
-                }
+            alert('Problème rencontré dans le réseau.');
+        }
             })
 
     });
@@ -76,3 +66,5 @@
 </script>
 
 </html>
+
+?>
