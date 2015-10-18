@@ -8,7 +8,7 @@
     <link rel="start" title="Accueil" href="index.php" />
     <link rel="icon" type="image/png" href="../img/favicon.ico" />
 </head>
-<body>
+<body>>
 
 
 <div class="container">
@@ -43,8 +43,10 @@
 <script type="text/javascript">
 
     $(document).ready(function(){
+        var id = Url.get.id;
         $.ajax({
-                url: WS_URL_GET_BOOK + $_GET['id'],
+
+                url: WS_URL_GET_BOOK + id,
                 type:'POST',
                 success: function(response)
                 {

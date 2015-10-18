@@ -2,7 +2,7 @@ var IP_ADDRESS = 'localhost';
 
 // API URL
 var WS_URL_GET_LISTPLAYLISTADMIN = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=listing';
-var WS_URL_GET_MUSIQUE = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=book&action=book&id=';
+var WS_URL_GET_BOOK = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=book&action=book&id=';
 
 
 

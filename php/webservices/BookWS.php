@@ -4,9 +4,9 @@ require_once('../database/db_connect.php');
 
 const PARAM_ACTION = 'action';
 const GET_BOOK = 'book';
-const SQL_GET_BOOK = 'SELECT * FROM Musique INNER JOIN belong ON belong.idBook';
+const SQL_GET_BOOK = 'SELECT * FROM Book INNER JOIN belong ON belong.idBook = Book.idBook INNER JOIN Playlist ON playlist.idPlaylist = belong.idPlaylist WHERE belong.idPlaylist=';
 
-    class PlaylistWS implements IWebService {
+    class BookWS implements IWebService {
 
         public function DoGet()
         {
