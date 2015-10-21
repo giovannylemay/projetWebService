@@ -18,7 +18,7 @@
             <div class="login">
                 <h1 id="title">Ajouter un livre</h1>
                 <label for="login">Titre</label>
-                <input type="text" id="title" name="title" class="form-control" value="" placeholder="Entrez le titre" />
+                <input type="text" id="title" name="title" class="form-control" value="" placeholder="Entrez le titre">
 
                 <br>
 
@@ -60,15 +60,20 @@
 <script type="text/javascript" src="../js/common.js"></script>
 <script type="text/javascript">
 
-    $.ajax({
-        url: "http://" + IP_ADDRESS + "/AGILE//php/ControllerWS.php?ws=genre&action=listing",
-        dataType = 'json',
+     $.ajax({
+        url: WS_GET_KIND,
+        dataType : 'json',
         type:'GET',
         async: false,
         success: function(data){
-            $.each(data, function(key, value){
 
-            });
+        var obj = jQuery.parseJSON(data);
+        for(var i = 0; i < obj.length;i++){
+
+            $('#genre').append('<OPTION value=' + obj[i].name +' id=' + obj[i].idKind +'> ' +obj[i].name + '</OPTION>');
+
+        }
+
 
         },
         error: function(msg){
