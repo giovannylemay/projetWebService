@@ -14,16 +14,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 CREATE SCHEMA IF NOT EXISTS `WebServices` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 USE `WebServices` ;
 
--- -----------------------------------------------------
--- Table `WebServices`.`Livre`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `WebServices`.`Livre` (
-  `idLivre` INT NOT NULL AUTO_INCREMENT,
-  `nomLivre` VARCHAR(45) NULL,
-  `Au` VARCHAR(45) NULL,
-  PRIMARY KEY (`idLivre`))
-ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `WebServices`.`Kind`
@@ -66,6 +56,7 @@ CREATE TABLE IF NOT EXISTS `WebServices`.`Book` (
   `title` VARCHAR(45) NULL,
   `size` VARCHAR(45) NULL,
   `duration` VARCHAR(45) NULL,
+  `lien` VARCHAR(100) NULL,
   `idKind` INT NOT NULL,
   `idSeries` INT NOT NULL,
   `idAuthor` INT NOT NULL,

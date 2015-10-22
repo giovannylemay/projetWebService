@@ -4,7 +4,8 @@ require_once('../database/db_connect.php');
 
 const PARAM_ACTION = 'action';
 const GET_KIND = 'listing';
-const SQL_GET_KIND = 'SELECT name, definition FROM kind';
+const ADD_KIND = 'register';
+const SQL_GET_KIND = 'SELECT idKind, name, definition FROM kind';
 
     class GenreWS Implements IWebService{
 
@@ -23,6 +24,8 @@ const SQL_GET_KIND = 'SELECT name, definition FROM kind';
 
                 case GET_KIND:
                     return $this->getKind();
+                case ADD_KIND:
+                    return $this->addKind();
                 default:
                     Helper::ThrowAccessDenied();
                     break;
@@ -33,6 +36,15 @@ const SQL_GET_KIND = 'SELECT name, definition FROM kind';
             MySQL::Execute(SQL_GET_KIND);
 
             return MySQL::GetResult()->fetchAll();
+        }
+
+        public function addKind(){
+            if (!isset($_GET['name']) || !isset($_GET['definition']))
+                Helper::ThrowAccessDenied();
+
+            MySQL::Execute("INSERT INTO kind(name, definition) VALUES ('".$_GET['name']."','".$_GET['definition']."')");
+
+            return true;
         }
 
         public function DoPut()
