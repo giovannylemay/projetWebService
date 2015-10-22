@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="216ad7bc-9327-4249-82a5-c9cecd313563" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/webservices/AuteurWS.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/webservices/BookWS.php" afterPath="$PROJECT_DIR$/php/webservices/BookWS.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/webservices/GenreWS.php" afterPath="$PROJECT_DIR$/php/webservices/GenreWS.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/webservices/UserWS.php" afterPath="$PROJECT_DIR$/php/webservices/UserWS.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/common.js" afterPath="$PROJECT_DIR$/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/database.sql" afterPath="$PROJECT_DIR$/database/database.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/formLivre.php" afterPath="$PROJECT_DIR$/views/formLivre.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/Playlist.php" afterPath="$PROJECT_DIR$/views/Playlist.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="projetWebService.iws" />
@@ -44,7 +39,7 @@
       <file leaf-file-name="PlaylistWS.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/webservices/PlaylistWS.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-20.923077">
               <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <marker date="1445191753502" expanded="true" signature="197:322" placeholder="SELECT * FRO..PlayList..." />
@@ -57,31 +52,41 @@
       <file leaf-file-name="BookWS.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/webservices/BookWS.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.846153">
-              <caret line="50" column="0" selection-start-line="49" selection-start-column="28" selection-end-line="50" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
               <folding>
-                <marker date="1445504031822" expanded="true" signature="203:358" placeholder="SELECT * FRO..Book..." />
-                <marker date="1445504031822" expanded="true" signature="1449:1686" placeholder="INSERT INTO ..." />
+                <marker date="1445506747879" expanded="true" signature="203:394" placeholder="SELECT * FRO..Book..." />
+                <marker date="1445506747879" expanded="true" signature="1485:1722" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Playlist.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Playlist.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/Playlist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.64408726">
+              <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formLivre.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="formLivre.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/formLivre.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33639494">
+            <state vertical-scroll-proportion="-11.269231">
               <caret line="276" column="18" selection-start-line="276" selection-start-column="18" selection-end-line="276" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListPlaylist.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/ListPlaylist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -117,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="106" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="106" />
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -159,7 +164,6 @@
         <option value="$PROJECT_DIR$/database/db_connect.php" />
         <option value="$PROJECT_DIR$/views/index.php" />
         <option value="$PROJECT_DIR$/php/webservices/PlaylistWS.php" />
-        <option value="$PROJECT_DIR$/views/Playlist.php" />
         <option value="$PROJECT_DIR$/views/ListPlaylist.php" />
         <option value="$PROJECT_DIR$/php/webservices/SerieWS.php" />
         <option value="$PROJECT_DIR$/php/webservices/GenreWS.php" />
@@ -168,8 +172,9 @@
         <option value="$PROJECT_DIR$/php/webservices/UserWS.php" />
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/database/database.sql" />
-        <option value="$PROJECT_DIR$/php/webservices/BookWS.php" />
         <option value="$PROJECT_DIR$/views/formLivre.php" />
+        <option value="$PROJECT_DIR$/php/webservices/BookWS.php" />
+        <option value="$PROJECT_DIR$/views/Playlist.php" />
       </list>
     </option>
   </component>
@@ -465,8 +470,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="43" />
           <folding>
-            <marker date="1445504031822" expanded="true" signature="203:358" placeholder="SELECT * FRO..Book..." />
-            <marker date="1445504031822" expanded="true" signature="1449:1686" placeholder="INSERT INTO ..." />
+            <marker date="1445506747879" expanded="true" signature="203:394" placeholder="SELECT * FRO..Book..." />
+            <marker date="1445506747879" expanded="true" signature="1485:1722" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -546,8 +551,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1445504031822" expanded="true" signature="203:358" placeholder="SELECT * FRO..Book..." />
-            <marker date="1445504031822" expanded="true" signature="1449:1686" placeholder="INSERT INTO ..." />
+            <marker date="1445506747879" expanded="true" signature="203:394" placeholder="SELECT * FRO..Book..." />
+            <marker date="1445506747879" expanded="true" signature="1485:1722" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -627,14 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ListPlaylist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/webservices/IWebService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -655,25 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/webservices/PlaylistWS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <marker date="1445191753502" expanded="true" signature="197:322" placeholder="SELECT * FRO..PlayList..." />
-            <marker date="1445191753502" expanded="true" signature="197:324" placeholder="SELECT Playl..PlayList..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/Playlist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -732,26 +710,53 @@
     <entry file="file://$PROJECT_DIR$/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="106" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="106" />
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/webservices/BookWS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.846153">
-          <caret line="50" column="0" selection-start-line="49" selection-start-column="28" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <marker date="1445504031822" expanded="true" signature="203:358" placeholder="SELECT * FRO..Book..." />
-            <marker date="1445504031822" expanded="true" signature="1449:1686" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/formLivre.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33639494">
+        <state vertical-scroll-proportion="-11.269231">
           <caret line="276" column="18" selection-start-line="276" selection-start-column="18" selection-end-line="276" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ListPlaylist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/webservices/PlaylistWS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.923077">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <marker date="1445191753502" expanded="true" signature="197:322" placeholder="SELECT * FRO..PlayList..." />
+            <marker date="1445191753502" expanded="true" signature="197:324" placeholder="SELECT Playl..PlayList..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/webservices/BookWS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+          <folding>
+            <marker date="1445506747879" expanded="true" signature="203:394" placeholder="SELECT * FRO..Book..." />
+            <marker date="1445506747879" expanded="true" signature="1485:1722" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Playlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64408726">
+          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
           <folding />
         </state>
       </provider>

@@ -24,6 +24,7 @@
 
                 <ul class="list-group" id="listBook"><ul>
 
+
             </div>
 
 
@@ -52,13 +53,17 @@
                 {
                     var obj = jQuery.parseJSON(response);
                     for(var i = 0; i < obj.length;i++){
-                    $('#listBook').append('<a href="Playlist.php?id='+ obj[i].idPlaylist +'" class="list-group-item" title="">'+ obj[i].name +'</a>');
+                       $('#listBook').append('<audio controls="controls"><source src="' + obj[i].lien + '" type="audio/mp3" />Votre navigateur n est pas compatible</audio>');
                     }
                 },
                 error: function(){
             alert('Problème rencontré dans le réseau.');
         }
-            })
+            });
+
+        $('#buttonBook').click(function(){
+
+        })
 
     });
 
@@ -68,5 +73,3 @@
 </script>
 
 </html>
-
-?>
