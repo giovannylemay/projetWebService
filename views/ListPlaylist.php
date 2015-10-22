@@ -71,6 +71,24 @@
 
     });
 
+    $(document).ready(function(){
+        $.ajax({
+            url: WS_URL_GET_LISTPLAYLIST + $_SESSION['monUserCo'],
+            type:'GET',
+            success: function(response)
+            {
+                var obj = jQuery.parseJSON(response);
+                for(var i = 0; i < obj.length;i++){
+                    $('#listPlaylist').append('<a href="Playlist.php?id='+ obj[i].idPlaylist +'" class="list-group-item" title="">'+ obj[i].name +'</a>');
+                }
+            },
+            error: function(){
+                alert('Problème rencontré dans le réseau.');
+            }
+        })
+
+    });
+
 
 
 

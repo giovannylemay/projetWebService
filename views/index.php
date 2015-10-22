@@ -26,11 +26,11 @@
         <div class="col-md-12 col-xs-12 col-centered vcenter">
 
             <div class="button">
-                <h1><a href="connexion/">Connexion</a></h1>
+                <h1><a href="connexion.php">Connexion</a></h1>
             </div>
 
             <div class="button">
-                <h1><a href="formulaire/">Inscription</a></h1>
+                <h1><a href="formulaire.php">Inscription</a></h1>
             </div>
 
         </div>

@@ -7,6 +7,7 @@ session_start();
 const PARAM_ACTION = 'action';
 const LOGIN_USER = 'login';
 const LOGOUT_USER = 'logout';
+const ADD_USER = 'register';
 
 class UserWS implements IWebService {
 
@@ -23,6 +24,8 @@ class UserWS implements IWebService {
                 return $this->login();
             case LOGOUT_USER:
                 return $this->logout();
+            case ADD_USER:
+                return $this->addUser();
             default :
                 Helper::ThrowAccessDenied();
         }
@@ -56,6 +59,17 @@ class UserWS implements IWebService {
             return true;
         }
         return false;
+    }
+
+    public function addUser(){
+
+        if (!isset($_GET['nom']) || !isset($_GET['prenom']) || !isset($_GET['email']) || !isset($_GET['mdp']))
+            Helper::ThrowAccessDenied();
+
+        MySQL::Execute("INSERT INTO user(name, firstname, email, password) VALUES ('".$_GET['nom']."','".$_GET['prenom']."','".$_GET['email']."','".$_GET['mdp']."')");
+
+        return true;
+
     }
 
     public function DoPut() {
