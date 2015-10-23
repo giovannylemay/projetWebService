@@ -66,7 +66,7 @@ class UserWS implements IWebService {
         if (!isset($_GET['nom']) || !isset($_GET['prenom']) || !isset($_GET['email']) || !isset($_GET['mdp']))
             Helper::ThrowAccessDenied();
 
-        MySQL::Execute("INSERT INTO user(name, firstname, email, password) VALUES ('".$_GET['nom']."','".$_GET['prenom']."','".$_GET['email']."','".$_GET['mdp']."')");
+        MySQL::Execute("INSERT INTO user(name, firstname, email, password, isAdmin) VALUES ('".$_GET['nom']."','".$_GET['prenom']."','".$_GET['email']."','".$_GET['mdp']."',0)");
 
         return true;
 
