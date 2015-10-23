@@ -5,11 +5,10 @@ require_once('../database/db_connect.php');
 const PARAM_ACTION = 'action';
 const GET_PLAYLIST_ADMIN = 'listing';
 const GET_PLAYLIST = 'listingPlaylist';
+const ADD_SHARE = 'share';
 const SQL_GET_PLAYLIST_ADMIN = 'SELECT Playlist.name, Playlist.idPlaylist, Playlist.dateCreation FROM PlayList INNER JOIN USER ON USER.idUser = PLAYLIST.idUser  WHERE USER.isAdmin = 1';
 const SQL_GET_PLAYLIST = 'SELECT Playlist.name as playlist, Playlist.idPlaylist, Playlist.dateCreation, User.name as user FROM PlayList INNER JOIN USER ON USER.IDUSER = PLAYLIST.IDCREATOR WHERE Playlist.idUser =';
 const ADD_PLAYLIST = 'add';
-const SQL_GET_PLAYLIST_ADMIN = 'SELECT Playlist.name, Playlist.idPlaylist FROM PlayList INNER JOIN USER ON USER.idUser = PLAYLIST.idUser WHERE USER.isAdmin = 1';
-const SQL_GET_PLAYLIST = 'SELECT Playlist.name, Playlist.idPlaylist FROM PlayList WHERE Playlist.idUser =';
 
 
     class PlaylistWS implements IWebService {
@@ -34,6 +33,8 @@ const SQL_GET_PLAYLIST = 'SELECT Playlist.name, Playlist.idPlaylist FROM PlayLis
                     return $this->getPlaylist();
                 case ADD_PLAYLIST:
                     return $this->addPlaylist();
+                case ADD_SHARE:
+                    return $this->share();
                 default:
                     Helper::ThrowAccessDenied();
                     break;
@@ -71,6 +72,24 @@ const SQL_GET_PLAYLIST = 'SELECT Playlist.name, Playlist.idPlaylist FROM PlayLis
 
             return true;
             
+        }
+
+        public function share(){
+            if(!isset($_GET['idUserShared']) || !isset($_GET['idP']))
+                Helper::ThrowAccessDenied();
+
+            MySQL::Execute("SELECT * FROM Playlist WHERE idPlaylist =".$_GET['idP']);
+
+            $playlistShared = MySQL::GetResult()->fetchAll();
+
+            $namePlaylistShared = $playlistShared[0]->name;
+            $datePlaylistShared = $playlistShared[0]->dateCreation;
+            $idCreatorPlaylistShared = $playlistShared[0]->idCreator;
+            $idUser = $_GET['idUserShared'];
+
+            MySQL::Execute("INSERT INTO playlist(name, dateCreation, idUser, idCreator) VALUES('$namePlaylistShared', '$datePlaylistShared','$idUser', '$idCreatorPlaylistShared' )");
+
+            return true;
         }
 
         public function DoPut()

@@ -18,11 +18,8 @@ var WS_URL_GET_LISTPLAYLIST = 'http://' + IP_ADDRESS + '/projetWebService/php/Co
 var WS_URL_GET_ALLBOOK = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=book&action=allBook';
 var WS_URL_ALL_USER = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=user&action=listing';
 var WS_REMOVE_USER = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=user&action=remove';
-<<<<<<< HEAD
-=======
 var WS_ADD_PLAYLIST = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=add';
 var WS_URL_SHARE = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=share';
->>>>>>> origin/master
 
 // Récupérer les GET de l'URL
 // Utilisation : Url.get.NOMDUPARAMGET

@@ -67,6 +67,22 @@
 <script type="text/javascript">
 
     $(document).ready(function(){
+
+        $.ajax({
+            url: WS_URL_ALL_USER,
+            type: 'GET',
+            success: function (response)
+            {
+                var obj = jQuery.parseJSON(response);
+                for (var i = 0; i < obj.length; i++) {
+                    $('#listUsers').append('<OPTION value=' + obj[i].idUser + '> ' + obj[i].name + ' - ' + obj[i].firstname + '</OPTION>');
+                }
+            },
+            error: function () {
+                alert('Probl�me rencontr� dans le r�seau.');
+            }
+        });
+
         if (Url.get.id){
             var id = Url.get.id;
         $.ajax({
@@ -107,35 +123,17 @@
 
     });
 
-    $('#popup').click(function(){
-        $.ajax({
-            url: WS_URL_ALL_USER,
-            type: 'GET',
-            success: function (response)
-            {
-                 var obj = jQuery.parseJSON(response);
-                for (var i = 0; i < obj.length; i++) {
-                    $('#listUsers').append('<OPTION value=' + obj[i].idUser + '> ' + obj[i].name + ' - ' + obj[i].firstname + '</OPTION>');
-                }
-            },
-            error: function () {
-                alert('Probl�me rencontr� dans le r�seau.');
-            }
-        });
-    });
-
     $('#valShare').click(function(){
-        $('#listUsers').html("");
         var id = Url.get.id;
+        var idUserShared = $('#listUsers').val();
         $.ajax({
             url: WS_URL_SHARE,
             type: 'GET',
-            data : { 'id' : $('listUsers').val(), 'idP' : var}
-            var WS_URL_SHARE = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=share'
+            data : { 'idUserShared' : idUserShared, 'idP' : id},
             success: function (response)
             {
+                //alert(response);
                 alert("Partage validé");
-                $('#valShare').close();
             },
             error: function () {
                 alert('Probl�me rencontr� dans le r�seau.');
