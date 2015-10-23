@@ -28,7 +28,7 @@
 
                 <br><br>
                 <div id="button">
-                    <input id="valForm" type="submit" value="Valider" class="btn btn-primary">
+                    <input id="valFormPlaylist" type="submit" value="Valider" class="btn btn-primary">
                 </div>
             </div>
 
@@ -39,30 +39,31 @@
 </div> <!--/container -->
 
 
+
 <script type="text/javascript" src="../js/library/jquery/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/library/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
 <script type="text/javascript">
-
-    $('#valform').click(function(){
+$( document ).ready(function() {
+    $('#valFormPlaylist').click(function(){
        if ($('#name').val() === ""){
            alert('Vous devez entrer tous les champs');
        }else{
            $.ajax({
-               url: WS_ADD_KIND,
+               url: WS_ADD_PLAYLIST,
                type:'GET',
                async: false,
-               data : { 'name' : $('#nameGenre').val(), 'definition' : $('#defGenre').val() },
+               data : { 'name' : $('#name').val(), 'idUser' : <?php echo $_SESSION['monUserCo'][0]->idUser ?> },
                success: function(data){
+                   alert(data);
                    alert('Ajout effectu�');
-                   Kind();
                },
                error: function(msg){
-                   console.log(msg.responseType);
                    console.log('Probl�me rencontr� dans le r�seau.');
                }
            });
        }
+    });
     });
 
 

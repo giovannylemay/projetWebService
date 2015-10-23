@@ -8,14 +8,11 @@ const PARAM_ACTION = 'action';
 const LOGIN_USER = 'login';
 const LOGOUT_USER = 'logout';
 const ADD_USER = 'register';
-<<<<<<< HEAD
 const ADD_ADMIN = 'registerAdmin';
-=======
 const REMOVE_USER = 'remove';
 const GET_ALL_USER = 'listing';
 const SQL_GET_ALL_USER = 'SELECT idUser, name, firstname, email, password FROM user WHERE isAdmin <> 1';
 const SQL_REMOVE_USER = 'DELETE FROM user WHERE idUser=';
->>>>>>> origin/master
 
 class UserWS implements IWebService {
 
@@ -34,15 +31,12 @@ class UserWS implements IWebService {
                 return $this->logout();
             case ADD_USER:
                 return $this->addUser();
-<<<<<<< HEAD
             case ADD_ADMIN:
                 return $this->addAdmin();
-=======
             case REMOVE_USER:
                 return $this->removeUser();
             case GET_ALL_USER:
                 return $this->getAllUser();
->>>>>>> origin/master
             default :
                 Helper::ThrowAccessDenied();
         }

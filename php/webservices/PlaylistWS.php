@@ -56,13 +56,17 @@ const SQL_GET_PLAYLIST = 'SELECT Playlist.name, Playlist.idPlaylist FROM PlayLis
         }
         
         public function addPlaylist(){
-            if(!isset($_GET['name']))
+            if(!isset($_GET['name']) || !isset($_GET['idUser']))
                 Helper::ThrowAccessDenied();
 
-        date_default_timezone_set('Europe/Paris');
-        MySQL::Execute("INSERT INTO playlist(name, dateCreation, idUser, idCreator) VALUES ('".$_GET['name']."','".."','".$_GET['email']."','".$_GET['mdp']."',0)");
+            date_default_timezone_set('Europe/Paris');
+            $name = $_GET['name'];
+            $today = date('y-m-d');
+            $id = $_GET['idUser'];
+            
+            MySQL::Execute("INSERT INTO playlist(name, dateCreation, idUser, idCreator) VALUES ('$name','$today','$id','$id')");
 
-        return true;
+            return true;
             
         }
 
