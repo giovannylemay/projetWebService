@@ -24,6 +24,10 @@
 
                 <br>
 
+                <button id="popup" type="button"  data-toggle="modal" data-target="#Share">Partager cette playlist</button>
+
+                <br><br>
+
                 <ul class="list-group" id="listBook"><ul>
 
 
@@ -35,7 +39,24 @@
     </div> <!-- /row-centered -->
 </div> <!-- /container -->
 
+<div id="Share" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Choisir un utilisateur avec qui partager</h4>
+            </div>
+            <label for="lien">Users </label>
+            <SELECT name="users" size="1" id="listUsers">
+
+            </SELECT>
+            <input type="submit" id="valShare"/>
+        </div>
+
+    </div>
+</div>
 
 <script type="text/javascript" src="../js/library/jquery/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/library/bootstrap.min.js"></script>
@@ -55,7 +76,7 @@
                 {
                     var obj = jQuery.parseJSON(response);
                     for(var i = 0; i < obj.length;i++){
-                       $('#listBook').append('<audio controls="controls"><source src="' + obj[i].lien + '" type="audio/mp3" />Votre navigateur n est pas compatible</audio><br>');
+                       $('#listBook').append('<label for="titre">Titre : ' + obj[i].name +' <br><label for="genre">Genre : ' + obj[i].kind +' <br><label for="series">Serie : ' + obj[i].series +' <br><label for="auteur">Auteur : ' + obj[i].author +' <br> <audio controls="controls"><source src="' + obj[i].lien + '" type="audio/mp3" />Votre navigateur n est pas compatible</audio><br>');
                     }
                 },
                 error: function(){
@@ -86,6 +107,39 @@
 
     });
 
+    $('#popup').click(function(){
+        $.ajax({
+            url: WS_URL_ALL_USER,
+            type: 'GET',
+            success: function (response)
+            {
+                 var obj = jQuery.parseJSON(response);
+                for (var i = 0; i < obj.length; i++) {
+                    $('#listUsers').append('<OPTION value=' + obj[i].idUser + '> ' + obj[i].name + ' - ' + obj[i].firstname + '</OPTION>');
+                }
+            },
+            error: function () {
+                alert('Probl�me rencontr� dans le r�seau.');
+            }
+        });
+    });
+
+    $('#valShare').click(function(){
+        $('#listUsers').html("");
+        $.ajax({
+            url: WS_URL_SHARE,
+            type: 'GET',
+            data : { 'id' : $('listUsers').val()}
+            success: function (response)
+            {
+                alert("Partage validé");
+                $('#valShare').close();
+            },
+            error: function () {
+                alert('Probl�me rencontr� dans le r�seau.');
+            }
+        });
+    })
 
 
 </script>

@@ -19,6 +19,7 @@ var WS_URL_GET_ALLBOOK = 'http://' + IP_ADDRESS + '/projetWebService/php/Control
 var WS_URL_ALL_USER = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=user&action=listing';
 var WS_REMOVE_USER = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=user&action=remove';
 var WS_ADD_PLAYLIST = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=add';
+var WS_URL_SHARE = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=share';
 
 // Récupérer les GET de l'URL
 // Utilisation : Url.get.NOMDUPARAMGET
