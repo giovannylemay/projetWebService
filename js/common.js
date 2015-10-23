@@ -11,9 +11,11 @@ var WS_ADD_SERIES = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS
 var WS_ADD_AUTEUR = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=auteur&action=register';
 var WS_ADD_BOOK = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=book&action=register';
 var WS_ADD_USER =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=register";
+var WS_ADD_ADMIN =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=registerAdmin";
 var WS_LOGIN =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=login";
 var WS_LOGOUT =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=logout";
 var WS_URL_GET_LISTPLAYLIST = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=listingPlaylist';
+var WS_URL_GET_ALLBOOK = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=book&action=allBook';
 
 // Récupérer les GET de l'URL
 // Utilisation : Url.get.NOMDUPARAMGET

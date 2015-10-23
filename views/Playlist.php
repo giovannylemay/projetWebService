@@ -11,6 +11,7 @@
 </head>
 <body>>
 
+<?php include_once('menu.php'); ?>
 
 <div class="container">
     <div class="row-centered">
@@ -45,29 +46,45 @@
 <script type="text/javascript">
 
     $(document).ready(function(){
-        var id = Url.get.id;
+        if (Url.get.id){
+            var id = Url.get.id;
         $.ajax({
-
                 url: WS_URL_GET_BOOK + id,
                 type:'POST',
                 success: function(response)
                 {
                     var obj = jQuery.parseJSON(response);
                     for(var i = 0; i < obj.length;i++){
-                       $('#listBook').append('<audio controls="controls"><source src="' + obj[i].lien + '" type="audio/mp3" />Votre navigateur n est pas compatible</audio>');
+                       $('#listBook').append('<audio controls="controls"><source src="' + obj[i].lien + '" type="audio/mp3" />Votre navigateur n est pas compatible</audio><br>');
                     }
                 },
                 error: function(){
             alert('Probl�me rencontr� dans le r�seau.');
         }
             });
+        }else{
+            $.ajax({
+                url: WS_URL_GET_ALLBOOK,
+                type:'POST',
+                success: function(response)
+                {
+                    var obj = jQuery.parseJSON(response);
+                    for(var i = 0; i < obj.length;i++){
+                        $('#listBook').append(' <label for="titre">Titre : ' + obj[i].title +' <br><label for="genre">Genre : ' + obj[i].kind +' <br><label for="series">Serie : ' + obj[i].series +' <br><label for="auteur">Auteur : ' + obj[i].author +' <br> </label></label><audio controls="controls"><source src="' + obj[i].lien + '" type="audio/mp3" />Votre navigateur n est pas compatible</audio><br>');
+
+                    }
+                },
+                error: function(){
+                    alert('Probl�me rencontr� dans le r�seau.');
+                }
+            });
+        }
 
         $('#buttonBook').click(function(){
 
         })
 
     });
-
 
 
 
