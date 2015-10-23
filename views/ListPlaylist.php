@@ -44,8 +44,6 @@
     </div> <!-- /row-centered -->
 </div> <!-- /container -->
 
-
-
 <script type="text/javascript" src="../js/library/jquery/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/library/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
@@ -62,7 +60,7 @@
                 {
                     var obj = jQuery.parseJSON(response);
                     for(var i = 0; i < obj.length;i++){
-                        $('#listPlaylistAdmin').append('<a href="Playlist.php?id='+ obj[i].idPlaylist +'" class="list-group-item" title="">'+ obj[i].name +'</a>');
+                        $('#listPlaylistAdmin').append('<a href="Playlist.php?id='+ obj[i].idPlaylist +'" class="list-group-item" title="">Nom : '+ obj[i].name +' - Création : '+ obj[i].dateCreation +' - Créateur : Admin</a>');
                     }
                 },
                 error: function(){
@@ -82,7 +80,7 @@
                 {
                     var obj = jQuery.parseJSON(response);
                     for(var i = 0; i < obj.length;i++){
-                        $('#listPlaylist').append('<a href="Playlist.php?id='+ obj[i].idPlaylist +'" class="list-group-item" title="">'+ obj[i].name +'</a>');
+                        $('#listPlaylist').append('<a href="Playlist.php?id='+ obj[i].idPlaylist +'" class="list-group-item" title="">Nom : '+ obj[i].playlist +' - Création :  '+ obj[i].dateCreation +' - Créateur : '+ obj[i].user +'</a>');
                     }
                 },
                 error: function(){
@@ -95,8 +93,6 @@
 
 
     });
-
-
 
 
 </script>

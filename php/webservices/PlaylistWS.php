@@ -5,8 +5,8 @@ require_once('../database/db_connect.php');
 const PARAM_ACTION = 'action';
 const GET_PLAYLIST_ADMIN = 'listing';
 const GET_PLAYLIST = 'listingPlaylist';
-const SQL_GET_PLAYLIST_ADMIN = 'SELECT Playlist.name, Playlist.idPlaylist FROM PlayList INNER JOIN USER ON USER.idUser = PLAYLIST.idUser WHERE USER.isAdmin = 1';
-const SQL_GET_PLAYLIST = 'SELECT Playlist.name, Playlist.idPlaylist FROM PlayList WHERE Playlist.idUser =';
+const SQL_GET_PLAYLIST_ADMIN = 'SELECT Playlist.name, Playlist.idPlaylist, Playlist.dateCreation FROM PlayList INNER JOIN USER ON USER.idUser = PLAYLIST.idUser  WHERE USER.isAdmin = 1';
+const SQL_GET_PLAYLIST = 'SELECT Playlist.name as playlist, Playlist.idPlaylist, Playlist.dateCreation, User.name as user FROM PlayList INNER JOIN USER ON USER.IDUSER = PLAYLIST.IDCREATOR WHERE Playlist.idUser =';
 
     class PlaylistWS implements IWebService {
 
