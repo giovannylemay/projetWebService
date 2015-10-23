@@ -38,11 +38,12 @@
 
                 <br>
 
-                <label for="lien">Lien * </label>
+                <label for="lien">Lien * (à noter que le fichier doit être placé dans le dossier "upload" de l'application)</label>
                 <input type="file" id="lien" />
 
                 <br>
 
+                <label for="lien">Genre </label>
                 <SELECT name="genre" size="1" id="genre">
 
                 </SELECT>
@@ -50,6 +51,7 @@
 
                 <br><br>
 
+                <label for="lien">Série </label>
                 <SELECT name="series" size="1" id="series">
 
                 </SELECT>
@@ -57,6 +59,7 @@
 
                 <br><br>
 
+                <label for="lien">Auteur</label>
                 <SELECT name="auteur" size="1" id="auteur">
 
                 </SELECT>
@@ -289,11 +292,13 @@
         }
     });
 
+
+
     $('#valForm').click(function(){
        if ($('#title').val() === "" || $('#duree').val() === "" || $('#taille').val() === '' || $('#lien').val() === ''){
            alert('Remplir tous les champs avec *');
        }else{
-           var lien = $('#lien').val().replace(/([|\[\]\/\\])/g, "\\\\")
+           var lien = $('#lien').val().replace(/([|\[\]\/\\])/g, "\\\\");
            $.ajax({
                url: WS_ADD_BOOK,
                type:'GET',
@@ -306,6 +311,40 @@
                    console.log('Probl�me rencontr� dans le r�seau.');
                }
            });
+           <?php
+           // checking image
+           /* if (($_FILES["image"]["type"] == "image/gif")
+            or ($_FILES["image"]["type"] == "image/jpeg")
+            or ($_FILES["image"]["type"] == "image/pjpeg")
+            or ($_FILES["image"]["type"] == "image/png"))
+            {
+                if ($_FILES["image"]["error"] == 0)
+                {
+                    move_uploaded_file($_FILES["image"]["tmp_name"],
+                    "upload/".$_FILES["image"]["name"]);
+
+                }
+                else
+                {
+                    echo "image upload failed";
+                }
+            }
+            else
+            {
+                echo "file is not supported image";
+
+            }
+               //for audio
+               if ($_FILES["audio"]["error"] == 0)
+               {
+                   move_uploaded_file($_FILES["audio"]["tmp_name"],
+                       "upload/".$_FILES["audio"]["name"]);
+               }
+               else
+               {
+                   echo "audio upload failed";
+               }*/
+            ?>
        }
     });
 

@@ -20,6 +20,7 @@
                 <li <?php echo ($currentPage == 'Listplaylist.php' ) ? 'class="active"' : ''; ?>><a href="Listplaylist.php">Playlist</a></li>
                 <li <?php echo ($currentPage == 'formPlaylist.php' ) ? 'class="active"' : ''; ?>><a href="formPlaylist.php">Ajouter une playlist</a></li>
                 <li <?php echo ($currentPage == 'formLivre.php' ) ? 'class="active"' : ''; ?>><a href="formLivre.php">Ajouter livre</a></li>
+                <li <?php echo ($currentPage == 'Playlist.php' ) ? 'class="active"' : ''; ?>><a href="Playlist.php">Voir tous les livres</a></li>
                 <?php 
                     if($_SESSION['monUserCo'][0]->isAdmin === '1'){
                         echo '<li ';
