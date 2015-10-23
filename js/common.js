@@ -20,6 +20,8 @@ var WS_URL_ALL_USER = 'http://' + IP_ADDRESS + '/projetWebService/php/Controller
 var WS_REMOVE_USER = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=user&action=remove';
 var WS_ADD_PLAYLIST = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=add';
 var WS_URL_SHARE = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=share';
+var WS_URL_GET_ALLBOOKFORPLAYLIST = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=book&action=listing';
+var WS_ADD_BELONG = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=addBelong';
 
 // Récupérer les GET de l'URL
 // Utilisation : Url.get.NOMDUPARAMGET

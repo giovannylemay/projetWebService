@@ -8,6 +8,9 @@ const ADD_BOOK = 'register';
 const GET_ALL_BOOK = 'allBook';
 const SQL_GET_BOOK = 'SELECT Kind.name as kind, series.name as series, author.name as author, Book.title as name, Book.lien as lien FROM Book INNER JOIN belong ON belong.idBook = Book.idBook INNER JOIN Playlist ON playlist.idPlaylist = belong.idPlaylist INNER JOIN kind ON kind.idKind = book.idKind inner join series ON series.idSeries = book.idSeries INNER JOIN author ON author.idAuthor=book.idAuthor WHERE belong.idPlaylist=';
 const SQL_GET_ALLBOOK = 'SELECT book.title, book.lien, series.name as series, kind.name as kind, author.name as author FROM book INNER join kind on kind.idKind = book.idKind inner join series on series.idSeries = book.idSeries inner join author on author.idauthor = book.idauthor';
+const GET_ALL_BOOK_FOR_PLAYLIST = "listing";
+const SQL_ALL_BOOK_FOR_PLAYLIST = "SELECT idBook, title, size, duration, lien FROM book";
+
     class BookWS implements IWebService {
 
         public function DoGet()
@@ -29,6 +32,8 @@ const SQL_GET_ALLBOOK = 'SELECT book.title, book.lien, series.name as series, ki
                     return $this->addBook();
                 case GET_ALL_BOOK:
                     return $this->getAllBook();
+                case GET_ALL_BOOK_FOR_PLAYLIST:
+                    return $this->getAllBookForPlaylist();
                 default:
                     Helper::ThrowAccessDenied();
                     break;
@@ -60,6 +65,13 @@ const SQL_GET_ALLBOOK = 'SELECT book.title, book.lien, series.name as series, ki
         public function getAllBook(){
 
             MySQL::Execute(SQL_GET_ALLBOOK);
+
+            return MySQL::GetResult()->fetchAll();
+        }
+        
+        public function getAllBookForPlaylist() {
+
+            MySQL::Execute(SQL_ALL_BOOK_FOR_PLAYLIST);
 
             return MySQL::GetResult()->fetchAll();
         }

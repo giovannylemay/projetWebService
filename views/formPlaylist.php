@@ -55,7 +55,6 @@ $( document ).ready(function() {
                async: false,
                data : { 'name' : $('#name').val(), 'idUser' : <?php echo $_SESSION['monUserCo'][0]->idUser ?> },
                success: function(data){
-                   alert(data);
                    alert('Ajout effectu�');
                },
                error: function(msg){

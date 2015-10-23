@@ -9,6 +9,7 @@ const ADD_SHARE = 'share';
 const SQL_GET_PLAYLIST_ADMIN = 'SELECT Playlist.name, Playlist.idPlaylist, Playlist.dateCreation FROM PlayList INNER JOIN USER ON USER.idUser = PLAYLIST.idUser  WHERE USER.isAdmin = 1';
 const SQL_GET_PLAYLIST = 'SELECT Playlist.name as playlist, Playlist.idPlaylist, Playlist.dateCreation, User.name as user FROM PlayList INNER JOIN USER ON USER.IDUSER = PLAYLIST.IDCREATOR WHERE Playlist.idUser =';
 const ADD_PLAYLIST = 'add';
+const ADD_BELONG = 'addBelong';
 
 
     class PlaylistWS implements IWebService {
@@ -35,6 +36,8 @@ const ADD_PLAYLIST = 'add';
                     return $this->addPlaylist();
                 case ADD_SHARE:
                     return $this->share();
+                case ADD_BELONG:
+                    return $this->addBelong();
                 default:
                     Helper::ThrowAccessDenied();
                     break;
@@ -69,6 +72,19 @@ const ADD_PLAYLIST = 'add';
             $id = $_GET['idUser'];
             
             MySQL::Execute("INSERT INTO playlist(name, dateCreation, idUser, idCreator) VALUES ('$name','$today','$id','$id')");
+
+            return true;
+            
+        }
+        
+        public function addBelong(){
+            if(!isset($_GET['idBook']) || !isset($_GET['idPlaylist']))
+                Helper::ThrowAccessDenied();
+            
+            $idBook = $_GET['idBook'];
+            $idPlaylist = $_GET['idPlaylist'];
+            
+            MySQL::Execute("INSERT INTO belong(idBook, idPlaylist) VALUES ('$idBook','$idPlaylist')");
 
             return true;
             

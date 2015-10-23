@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">PROJET WEB SERVICES</a>
+            <a class="navbar-brand" href="accueil.php">PROJET WEB SERVICES</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
