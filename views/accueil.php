@@ -21,6 +21,7 @@
 
                 <h1>Bienvenue</h1>
                 <?php echo var_dump($_SESSION); ?>
+                <?php echo var_dump($_SESSION['monUserCo'][0]->isAdmin); ?>
 
             </div> <!-- /col-centered -->
 

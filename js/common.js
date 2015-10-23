@@ -14,6 +14,8 @@ var WS_ADD_USER =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.
 var WS_LOGIN =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=login";
 var WS_LOGOUT =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=logout";
 var WS_URL_GET_LISTPLAYLIST = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=listingPlaylist';
+var WS_URL_ALL_USER = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=user&action=listing';
+var WS_REMOVE_USER = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=user&action=remove';
 
 // Récupérer les GET de l'URL
 // Utilisation : Url.get.NOMDUPARAMGET

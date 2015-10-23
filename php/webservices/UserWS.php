@@ -8,6 +8,10 @@ const PARAM_ACTION = 'action';
 const LOGIN_USER = 'login';
 const LOGOUT_USER = 'logout';
 const ADD_USER = 'register';
+const REMOVE_USER = 'remove';
+const GET_ALL_USER = 'listing';
+const SQL_GET_ALL_USER = 'SELECT idUser, name, firstname, email, password FROM user WHERE isAdmin <> 1';
+const SQL_REMOVE_USER = 'DELETE FROM user WHERE idUser=';
 
 class UserWS implements IWebService {
 
@@ -26,6 +30,10 @@ class UserWS implements IWebService {
                 return $this->logout();
             case ADD_USER:
                 return $this->addUser();
+            case REMOVE_USER:
+                return $this->removeUser();
+            case GET_ALL_USER:
+                return $this->getAllUser();
             default :
                 Helper::ThrowAccessDenied();
         }
@@ -69,7 +77,22 @@ class UserWS implements IWebService {
         MySQL::Execute("INSERT INTO user(name, firstname, email, password, isAdmin) VALUES ('".$_GET['nom']."','".$_GET['prenom']."','".$_GET['email']."','".$_GET['mdp']."',0)");
 
         return true;
+    }
+    
+    public function removeUser(){
+        if (!isset($_GET['idUser']))
+            Helper::ThrowAccessDenied();
+        
+        MySQL::Execute(SQL_REMOVE_USER.$_GET['idUser']);
+        return true;
+        //header('Location: gestionUser.php');
+    }
+    
+    public function getAllUser(){
+        MySQL::Execute(SQL_GET_ALL_USER);
 
+
+        return MySQL::GetResult()->fetchAll();
     }
 
     public function DoPut() {
