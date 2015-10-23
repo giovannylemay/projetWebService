@@ -46,12 +46,14 @@
         <script type="text/javascript" src="../js/library/bootstrap.min.js"></script>
         <script type="text/javascript" src="../js/common.js"></script>
         <script type="text/javascript">
+
+
             function Login() {
-                 var URL = "../php/ControllerWS.php"; // on recuperer l' adresse du lien
+                var URL = "../php/ControllerWS.php"; // on recuperer l' adresse du lien
                 $.ajax({// ajax
                     url: URL, // url de la page Ã  charger
                     cache: false, // pas de mise en cache
-                    data : "ws=" + "user" +  "&action="+ "login" + "&email=" + document.getElementById("email").value + "&password=" + document.getElementById("mdp").value,
+                    data: "ws=" + "user" + "&action=" + "login" + "&email=" + document.getElementById("email").value + "&password=" + document.getElementById("mdp").value,
                     dataType: 'text',
                     type: 'GET',
                     success: function (data) {// si la requÃªte est un succÃ¨s
@@ -65,8 +67,16 @@
                     }
                 });
                 return false; // on desactive le lien
-                }
+            }
 
+            $(document).ready(function () {
+                alert('Compte utilisateur\n\
+                email: test@test.fr\n\
+                password : test');
+                alert('Compte admin\n\
+                email: admin@admin.fr\n\
+                password : admin');
+            });
         </script>
     </body>
 </html>
