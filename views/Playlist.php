@@ -126,10 +126,12 @@
 
     $('#valShare').click(function(){
         $('#listUsers').html("");
+        var id = Url.get.id;
         $.ajax({
             url: WS_URL_SHARE,
             type: 'GET',
-            data : { 'id' : $('listUsers').val()}
+            data : { 'id' : $('listUsers').val(), 'idP' : var}
+            var WS_URL_SHARE = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=share'
             success: function (response)
             {
                 alert("Partage validé");
