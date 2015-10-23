@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="216ad7bc-9327-4249-82a5-c9cecd313563" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/formAdmin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/webservices/BookWS.php" afterPath="$PROJECT_DIR$/php/webservices/BookWS.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/Playlist.php" afterPath="$PROJECT_DIR$/views/Playlist.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/gestionUser.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/webservices/UserWS.php" afterPath="$PROJECT_DIR$/php/webservices/UserWS.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/accueil.php" afterPath="$PROJECT_DIR$/views/accueil.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/common.js" afterPath="$PROJECT_DIR$/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/formLivre.php" afterPath="$PROJECT_DIR$/views/formLivre.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/menu.php" afterPath="$PROJECT_DIR$/views/menu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -31,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Playlist.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Playlist.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/Playlist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58553386">
+            <state vertical-scroll-proportion="-19.615385">
               <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
               <folding />
             </state>
@@ -57,11 +55,21 @@
             <state vertical-scroll-proportion="-5.8846154">
               <caret line="9" column="279" selection-start-line="9" selection-start-column="279" selection-end-line="9" selection-end-column="279" />
               <folding>
-                <marker date="1445614299344" expanded="true" signature="235:426" placeholder="SELECT Book...Book..." />
-                <marker date="1445614299344" expanded="true" signature="454:708" placeholder="SELECT book...book..." />
-                <marker date="1445614299344" expanded="true" signature="2008:2163" placeholder="INSERT INTO ..." />
-                <marker date="1445614299344" expanded="true" signature="2008:2236" placeholder="INSERT INTO ..." />
+                <marker date="1445615483004" expanded="true" signature="235:426" placeholder="SELECT Book...Book..." />
+                <marker date="1445615483004" expanded="true" signature="454:708" placeholder="SELECT book...book..." />
+                <marker date="1445615483004" expanded="true" signature="2008:2163" placeholder="INSERT INTO ..." />
+                <marker date="1445615483004" expanded="true" signature="2008:2236" placeholder="INSERT INTO ..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5464983">
+              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,10 +108,10 @@
         <option value="$PROJECT_DIR$/php/webservices/UserWS.php" />
         <option value="$PROJECT_DIR$/views/formAdmin.php" />
         <option value="$PROJECT_DIR$/js/common.js" />
-        <option value="$PROJECT_DIR$/views/menu.php" />
         <option value="$PROJECT_DIR$/views/formLivre.php" />
         <option value="$PROJECT_DIR$/php/webservices/BookWS.php" />
         <option value="$PROJECT_DIR$/views/Playlist.php" />
+        <option value="$PROJECT_DIR$/views/menu.php" />
       </list>
     </option>
   </component>
@@ -408,10 +416,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="43" />
           <folding>
-            <marker date="1445614299344" expanded="true" signature="235:426" placeholder="SELECT Book...Book..." />
-            <marker date="1445614299344" expanded="true" signature="454:708" placeholder="SELECT book...book..." />
-            <marker date="1445614299344" expanded="true" signature="2008:2163" placeholder="INSERT INTO ..." />
-            <marker date="1445614299344" expanded="true" signature="2008:2236" placeholder="INSERT INTO ..." />
+            <marker date="1445615483004" expanded="true" signature="235:426" placeholder="SELECT Book...Book..." />
+            <marker date="1445615483004" expanded="true" signature="454:708" placeholder="SELECT book...book..." />
+            <marker date="1445615483004" expanded="true" signature="2008:2163" placeholder="INSERT INTO ..." />
+            <marker date="1445615483004" expanded="true" signature="2008:2236" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -485,10 +493,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1445614299344" expanded="true" signature="235:426" placeholder="SELECT Book...Book..." />
-            <marker date="1445614299344" expanded="true" signature="454:708" placeholder="SELECT book...book..." />
-            <marker date="1445614299344" expanded="true" signature="2008:2163" placeholder="INSERT INTO ..." />
-            <marker date="1445614299344" expanded="true" signature="2008:2236" placeholder="INSERT INTO ..." />
+            <marker date="1445615483004" expanded="true" signature="235:426" placeholder="SELECT Book...Book..." />
+            <marker date="1445615483004" expanded="true" signature="454:708" placeholder="SELECT book...book..." />
+            <marker date="1445615483004" expanded="true" signature="2008:2163" placeholder="INSERT INTO ..." />
+            <marker date="1445615483004" expanded="true" signature="2008:2236" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -657,9 +665,9 @@
         <state vertical-scroll-proportion="-24.846153">
           <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
           <folding>
-            <marker date="1445605639738" expanded="true" signature="-1:-1" placeholder="SELECT idUse..user..." />
-            <marker date="1445605639738" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1445605639738" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1445615484619" expanded="true" signature="-1:-1" placeholder="SELECT idUse..user..." />
+            <marker date="1445615484619" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1445615484619" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -699,14 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29735935">
-          <caret line="21" column="110" selection-start-line="21" selection-start-column="110" selection-end-line="21" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/formLivre.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
@@ -720,18 +720,26 @@
         <state vertical-scroll-proportion="-5.8846154">
           <caret line="9" column="279" selection-start-line="9" selection-start-column="279" selection-end-line="9" selection-end-column="279" />
           <folding>
-            <marker date="1445614299344" expanded="true" signature="235:426" placeholder="SELECT Book...Book..." />
-            <marker date="1445614299344" expanded="true" signature="454:708" placeholder="SELECT book...book..." />
-            <marker date="1445614299344" expanded="true" signature="2008:2163" placeholder="INSERT INTO ..." />
-            <marker date="1445614299344" expanded="true" signature="2008:2236" placeholder="INSERT INTO ..." />
+            <marker date="1445615483004" expanded="true" signature="235:426" placeholder="SELECT Book...Book..." />
+            <marker date="1445615483004" expanded="true" signature="454:708" placeholder="SELECT book...book..." />
+            <marker date="1445615483004" expanded="true" signature="2008:2163" placeholder="INSERT INTO ..." />
+            <marker date="1445615483004" expanded="true" signature="2008:2236" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/Playlist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58553386">
+        <state vertical-scroll-proportion="-19.615385">
           <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5464983">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           <folding />
         </state>
       </provider>
