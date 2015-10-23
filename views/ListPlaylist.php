@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,7 +66,7 @@
                     }
                 },
                 error: function(){
-                    alert('Problème rencontré dans le réseau.');
+                    alert('Problï¿½me rencontrï¿½ dans le rï¿½seau.');
                 }
             })
 
@@ -83,7 +84,7 @@
                 }
             },
             error: function(){
-                alert('Problème rencontré dans le réseau.');
+                alert('Problï¿½me rencontrï¿½ dans le rï¿½seau.');
             }
         })
 

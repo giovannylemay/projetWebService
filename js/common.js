@@ -10,7 +10,9 @@ var WS_ADD_KIND = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.p
 var WS_ADD_SERIES = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=series&action=register';
 var WS_ADD_AUTEUR = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=auteur&action=register';
 var WS_ADD_BOOK = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=book&action=register';
-var WS_ADD_USER =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=register"
+var WS_ADD_USER =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=register";
+var WS_LOGIN =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=login";
+var WS_LOGOUT =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=logout";
 
 // Récupérer les GET de l'URL
 // Utilisation : Url.get.NOMDUPARAMGET

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,8 +28,8 @@
 
                 <br>
 
-                <label for="duree">Durée * </label>
-                <input type="text" id="duree" name="duree" class="form-control" value="" placeholder="Entrez la durée">
+                <label for="duree">Durï¿½e * </label>
+                <input type="text" id="duree" name="duree" class="form-control" value="" placeholder="Entrez la durï¿½e">
 
                 <br>
 
@@ -76,7 +77,7 @@
                         </div>
                         <div class="modal-body">
                             <input type="text" id="nameGenre" placeholder="Entrez un nom"><br><br>
-                            <input type="text" id="defGenre" placeholder="Entrez une définition">
+                            <input type="text" id="defGenre" placeholder="Entrez une dï¿½finition">
                         </div>
                         <div class="modal-footer">
                             <button type="button" id="valGenre" class="btn btn-default" data-dismiss="modal">Valider</button>
@@ -95,11 +96,11 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Ajouter une série</h4>
+                            <h4 class="modal-title">Ajouter une sï¿½rie</h4>
                         </div>
                         <div class="modal-body">
                             <input type="text" id="nameSerie" placeholder="Entrez un nom"><br><br>
-                            <input type="text" id="detailSerie" placeholder="Entrez un détail">
+                            <input type="text" id="detailSerie" placeholder="Entrez un dï¿½tail">
                         </div>
                         <div class="modal-footer">
                             <button type="button" id="valSeries" class="btn btn-default" data-dismiss="modal">Valider</button>
@@ -151,7 +152,7 @@
         Author();
     });
 
-    ///////////// Remplir liste déroulante - Genre ////////////////////
+    ///////////// Remplir liste dï¿½roulante - Genre ////////////////////
     function Kind() {
         $.ajax({
             url: WS_GET_KIND,
@@ -168,13 +169,13 @@
             },
             error: function (msg) {
                 console.log(msg.responseType);
-                console.log('Problème rencontré dans le réseau.');
+                console.log('Problï¿½me rencontrï¿½ dans le rï¿½seau.');
             }
         });
     };
 
 
-     ///////////// Remplir liste déroulante - Séries ////////////////////
+     ///////////// Remplir liste dï¿½roulante - Sï¿½ries ////////////////////
     function Series(){
          $.ajax({
              url: WS_GET_SERIES,
@@ -191,13 +192,13 @@
              },
              error: function(msg){
                  console.log(msg.responseType);
-                 console.log('Problème rencontré dans le réseau.');
+                 console.log('Problï¿½me rencontrï¿½ dans le rï¿½seau.');
              }
          });
     };
 
 
-    ///////////// Remplir liste déroulante - Auteur ////////////////////
+    ///////////// Remplir liste dï¿½roulante - Auteur ////////////////////
     function Author() {
         $.ajax({
             url: WS_GET_AUTEUR,
@@ -215,7 +216,7 @@
             },
             error: function (msg) {
                 console.log(msg.responseType);
-                console.log('Problème rencontré dans le réseau.');
+                console.log('Problï¿½me rencontrï¿½ dans le rï¿½seau.');
             }
         });
     };
@@ -230,12 +231,12 @@
                async: false,
                data : { 'name' : $('#nameGenre').val(), 'definition' : $('#defGenre').val() },
                success: function(data){
-                   alert('Ajout effectué');
+                   alert('Ajout effectuï¿½');
                    Kind();
                },
                error: function(msg){
                    console.log(msg.responseType);
-                   console.log('Problème rencontré dans le réseau.');
+                   console.log('Problï¿½me rencontrï¿½ dans le rï¿½seau.');
                }
            });
        }
@@ -251,12 +252,12 @@
                 async: false,
                 data : { 'name' : $('#nameSerie').val(), 'detail' : $('#detailSerie').val() },
                 success: function(data){
-                    alert('Ajout effectué');
+                    alert('Ajout effectuï¿½');
                     Series();
                 },
                 error: function(msg){
                     console.log(msg.responseType);
-                    console.log('Problème rencontré dans le réseau.');
+                    console.log('Problï¿½me rencontrï¿½ dans le rï¿½seau.');
                 }
             });
         }
@@ -272,12 +273,12 @@
                 async: false,
                 data : { 'name' : $('#nameAuteur').val(), 'firstname' : $('#prenomAuteur').val() },
                 success: function(data){
-                    alert('Ajout effectué');
+                    alert('Ajout effectuï¿½');
                     Author();
                 },
                 error: function(msg){
                     console.log(msg.responseType);
-                    console.log('Problème rencontré dans le réseau.');
+                    console.log('Problï¿½me rencontrï¿½ dans le rï¿½seau.');
                 }
             });
         }
@@ -293,11 +294,11 @@
                type:'GET',
                data : { 'title' : $('#title').val(), 'duree' : $('#duree').val(), 'taille' : $('#taille').val(), 'lien' : lien, 'idGenre' : $('#genre').val(), 'idSeries' : $('#series').val(), 'idAuteur' : $('#auteur').val()},
                 success: function(data){
-                    alert('Ajout effectué');
+                    alert('Ajout effectuï¿½');
                 },
                error: function(msg){
                    console.log(msg.responseType);
-                   console.log('Problème rencontré dans le réseau.');
+                   console.log('Problï¿½me rencontrï¿½ dans le rï¿½seau.');
                }
            });
        }

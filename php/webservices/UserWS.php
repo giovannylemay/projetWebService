@@ -40,11 +40,11 @@ class UserWS implements IWebService {
         MySQL::Execute($sql);
         $verif = MySQL::GetResult()->fetchAll();
 
-        $user = MySQL::GetResult()->fetch();
+        //$user = MySQL::GetResult()->fetch();
 
         if (count($verif) !== 0) {
             $_SESSION['Logged'] = 1;
-            $_SESSION['monUserCo'] = $user;
+            $_SESSION['monUserCo'] = $verif;
             // var_dump($_SESSION['Logged']);
             return true;
         } else {

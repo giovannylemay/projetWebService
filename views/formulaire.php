@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +38,7 @@
 
                 <br>
 
-                <label for="login">Vérification mot de passe</label>
+                <label for="login">Vï¿½rification mot de passe</label>
                 <input type="password" id="mdp2" name="mdp" class="form-control" value="" placeholder="Entrez votre mot de passe" />
 
                 <br>
@@ -75,12 +76,12 @@
                             'mdp': $('#mdp').val()
                         },
                         success: function (data) {
-                            alert("Ajout effectué");
+                            alert("Ajout effectuï¿½");
                             document.location.href = "index.php";
                         },
                         error: function (msg) {
                             console.log(msg.responseType);
-                            console.log('Problème rencontré dans le réseau.');
+                            console.log('Problï¿½me rencontrï¿½ dans le rï¿½seau.');
                         }
 
                 });
