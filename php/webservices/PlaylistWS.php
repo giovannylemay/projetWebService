@@ -5,14 +5,12 @@ require_once('../database/db_connect.php');
 const PARAM_ACTION = 'action';
 const GET_PLAYLIST_ADMIN = 'listing';
 const GET_PLAYLIST = 'listingPlaylist';
-<<<<<<< HEAD
 const SQL_GET_PLAYLIST_ADMIN = 'SELECT Playlist.name, Playlist.idPlaylist, Playlist.dateCreation FROM PlayList INNER JOIN USER ON USER.idUser = PLAYLIST.idUser  WHERE USER.isAdmin = 1';
 const SQL_GET_PLAYLIST = 'SELECT Playlist.name as playlist, Playlist.idPlaylist, Playlist.dateCreation, User.name as user FROM PlayList INNER JOIN USER ON USER.IDUSER = PLAYLIST.IDCREATOR WHERE Playlist.idUser =';
-=======
 const ADD_PLAYLIST = 'add';
 const SQL_GET_PLAYLIST_ADMIN = 'SELECT Playlist.name, Playlist.idPlaylist FROM PlayList INNER JOIN USER ON USER.idUser = PLAYLIST.idUser WHERE USER.isAdmin = 1';
 const SQL_GET_PLAYLIST = 'SELECT Playlist.name, Playlist.idPlaylist FROM PlayList WHERE Playlist.idUser =';
->>>>>>> origin/master
+
 
     class PlaylistWS implements IWebService {
 
@@ -61,13 +59,17 @@ const SQL_GET_PLAYLIST = 'SELECT Playlist.name, Playlist.idPlaylist FROM PlayLis
         }
         
         public function addPlaylist(){
-            if(!isset($_GET['name']))
+            if(!isset($_GET['name']) || !isset($_GET['idUser']))
                 Helper::ThrowAccessDenied();
 
-        date_default_timezone_set('Europe/Paris');
-        MySQL::Execute("INSERT INTO playlist(name, dateCreation, idUser, idCreator) VALUES ('".$_GET['name']."','".."','".$_GET['email']."','".$_GET['mdp']."',0)");
+            date_default_timezone_set('Europe/Paris');
+            $name = $_GET['name'];
+            $today = date('y-m-d');
+            $id = $_GET['idUser'];
+            
+            MySQL::Execute("INSERT INTO playlist(name, dateCreation, idUser, idCreator) VALUES ('$name','$today','$id','$id')");
 
-        return true;
+            return true;
             
         }
 
