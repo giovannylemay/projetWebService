@@ -11,7 +11,7 @@
 </head>
 <body>
 
-
+<?php include_once('menu.php'); ?>
 <div class="container">
     <div class="row-centered">
 
@@ -31,11 +31,11 @@
 
             <div class="list-playlist">
 
-                <h1>Liste des playlist personnelles</h1>
+                <h1 id="libelle">Liste des playlist personnelles</h1>
 
                 <br>
 
-                <ul class="list-group" id="listPlaylistPerso"><ul>
+                <ul class="list-group" id="listPlaylist"><ul>
 
             </div>
 
@@ -68,25 +68,31 @@
                 error: function(){
                     alert('Probl�me rencontr� dans le r�seau.');
                 }
-            })
+            });
 
-    });
+        var sessionId = <?php echo $_SESSION['monUserCo'][0]->idUser; ?>;
+        var isAdmin = <?php echo $_SESSION['monUserCo'][0]->isAdmin; ?>;
 
-    $(document).ready(function(){
-        $.ajax({
-            url: WS_URL_GET_LISTPLAYLIST + $_SESSION['monUserCo'],
-            type:'GET',
-            success: function(response)
-            {
-                var obj = jQuery.parseJSON(response);
-                for(var i = 0; i < obj.length;i++){
-                    $('#listPlaylist').append('<a href="Playlist.php?id='+ obj[i].idPlaylist +'" class="list-group-item" title="">'+ obj[i].name +'</a>');
+        if (isAdmin != 1){
+            $.ajax({
+                url: WS_URL_GET_LISTPLAYLIST,
+                type:'GET',
+                data : { 'id' :  sessionId},
+                success: function(response)
+                {
+                    var obj = jQuery.parseJSON(response);
+                    for(var i = 0; i < obj.length;i++){
+                        $('#listPlaylist').append('<a href="Playlist.php?id='+ obj[i].idPlaylist +'" class="list-group-item" title="">'+ obj[i].name +'</a>');
+                    }
+                },
+                error: function(){
+                    alert('Probl�me rencontr� dans le r�seau.');
                 }
-            },
-            error: function(){
-                alert('Probl�me rencontr� dans le r�seau.');
-            }
-        })
+            });
+        }else{
+            $('#libelle').hide();
+        }
+
 
     });
 

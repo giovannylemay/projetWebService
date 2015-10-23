@@ -13,6 +13,7 @@ var WS_ADD_BOOK = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.p
 var WS_ADD_USER =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=register";
 var WS_LOGIN =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=login";
 var WS_LOGOUT =  "http://" + IP_ADDRESS + "/projetWebService/php/ControllerWS.php?ws=user&action=logout";
+var WS_URL_GET_LISTPLAYLIST = 'http://' + IP_ADDRESS + '/projetWebService/php/ControllerWS.php?ws=playlist&action=listingPlaylist';
 
 // Récupérer les GET de l'URL
 // Utilisation : Url.get.NOMDUPARAMGET

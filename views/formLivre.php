@@ -11,10 +11,15 @@
 </head>
 <body>
 
+
+<?php include_once('menu.php'); ?>
+
 <div class="container">
     <div class="row-centered">
 
+
         <div class="col-md-12 col-xs-12 col-centered vcenter">
+
 
             <div class="login">
                 <h1 id="titre">Ajouter un livre</h1>

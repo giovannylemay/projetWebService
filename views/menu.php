@@ -17,7 +17,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li <?php echo ($currentPage == 'accueil.php' ) ? 'class="active"' : ''; ?>><a href="accueil.php">Accueil</a></li>
-                <li <?php echo ($currentPage == 'playlist.php' ) ? 'class="active"' : ''; ?>><a href="playlist.php">Playlist</a></li>
+                <li <?php echo ($currentPage == 'Listplaylist.php' ) ? 'class="active"' : ''; ?>><a href="Listplaylist.php">Playlist</a></li>
+                <li <?php echo ($currentPage == 'formLivre.php' ) ? 'class="active"' : ''; ?>><a href="formLivre.php">Ajouter livre</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <input type="button" class="btn btn-default navbar-btn" value="Deconnexion" onclick="Logout()"/>
